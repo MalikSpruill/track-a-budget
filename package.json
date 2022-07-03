@@ -1,7 +1,7 @@
 {
-  "name": "budget-app",
+  "name": "track-a-budget",
   "version": "1.0.0",
-  "description": "",
+  "description": "A budget-tracking app that allows users to keep track of their budget even while offline via IndexedDB and PWA",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
