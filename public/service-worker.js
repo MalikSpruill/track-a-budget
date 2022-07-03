@@ -1,13 +1,13 @@
-const APP_PREFIX = 'TrackABudget-';     
+const APP_PREFIX = 'TrackABudget-';  // app name   
 const VERSION = 'version_01';
-const CACHE_NAME = APP_PREFIX + VERSION;
+const CACHE_NAME = APP_PREFIX + VERSION; // global contstant to keep track of which cache to use
 const FILES_TO_CACHE = [
     "./index.html",
     "./css/styles.css",
     "./js/index.js",
 ];
 
-
+// self refers to service-worker - if cache is available, respond with cache - else there is no cache, try fetching request
 self.addEventListener('fetch', function (e) {
     console.log('fetch request : ' + e.request.url)
     e.respondWith(
@@ -26,6 +26,7 @@ self.addEventListener('install', function (e) {
     )
 })
 
+// In the activation step, we clear out any old data from the cache and, in the same step, tell the service worker how to manage caches.
 self.addEventListener('activate', function(e) {
     e.waitUntil(
       caches.keys().then(function(keyList) {
