@@ -7,6 +7,9 @@
   
   [Access the link to the deployed application here!](https://protected-wildwood-15409.herokuapp.com/)
   
+
+  <img src="./public/images/tbudget-screenshot.png" width="600px" />
+
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
